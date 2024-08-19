@@ -1,0 +1,176 @@
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops
+$ ls -lrt
+total 29
+drwxr-xr-x 1 revat 197609    0 Aug  8 00:01 Bash-Scripting/
+-rw-r--r-- 1 revat 197609   13 Aug  8 00:03 file1txt
+-rwxr-xr-x 1 revat 197609  715 Aug 10 00:51 directory_file_operations.sh*
+!/bin/bash/
+drwxr-xr-x 1 revat 197609    0 Aug 10 00:51 my_directory/
+drwxr-xr-x 1 revat 197609    0 Aug 10 00:59 workspace/
+-rw-r--r-- 1 revat 197609    0 Aug 10 01:02 startup.sh
+!/bin/bash/
+-rw-r--r-- 1 revat 197609    0 Aug 10 01:03 cleanup.sh
+-rwxr-xr-x 1 revat 197609  968 Aug 10 01:04 cron-task.sh*
+drwxr-xr-x 1 revat 197609    0 Aug 10 01:04 build/
+-rw-r--r-- 1 revat 197609  164 Aug 13 22:23 dockerfile
+-rw-r--r-- 1 revat 197609    6 Aug 13 22:24 requirements.txt
+-rw-r--r-- 1 revat 197609 5098 Aug 13 22:26 app.py
+-rw-r--r-- 1 revat 197609  170 Aug 13 22:36 docker-node
+drwxr-xr-x 1 revat 197609    0 Aug 13 22:59 nodejs/
+-rw-r--r-- 1 revat 197609  167 Aug 19 22:16 docker-compose.yaml
+drwxr-xr-x 1 revat 197609    0 Aug 20 00:59 my-git-repo/
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops
+$ cd my-git-repo/
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo
+$ ls -lrt
+total 0
+-rw-r--r-- 1 revat 197609 0 Aug 20 01:00 script1.sh
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo
+$ view script1.sh
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo
+$ echo script2.sh
+script2.sh
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo
+$ vi script2.sh
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo
+$ view script1.sh
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo
+$ chmod 755 script1.sh 
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo
+$ chmod 755 script2.sh
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo
+$ git init
+Initialized empty Git repository in C:/Users/revat/OneDrive/Desktop/Guvi-Devops/my-git-repo/.git/
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo (master)
+$ git add script1.sh script2.sh 
+warning: in the working copy of 'script1.sh', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'script2.sh', LF will be replaced by CRLF the next time Git touches it
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo (master)
+$ git commit -m "Initial commit with script files"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'revat@LAPTOP-UKE489SP.(none)')
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo (master)
+$ git config --global user.email tadelarevathi1989@gmail.com
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo (master)
+$ git config --global user.name revathi
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo (master)
+$ git commit -m "Initial commit with script files"
+[master (root-commit) 8525d5c] Initial commit with script files
+ 2 files changed, 5 insertions(+)
+ create mode 100644 script1.sh
+ create mode 100644 script2.sh
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo (master)
+$ git remote add origin https://github.com/Revathi-Tadela/my-git-repo.git
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo (master)
+$ git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 332 bytes | 332.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Revathi-Tadela/my-git-repo.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo (master)
+$ git checkout -b rebase-branch
+Switched to a new branch 'rebase-branch'
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo (rebase-branch)
+$ echo "# Updated by rebase branch" >> script2.sh
+git add script2.sh
+git commit -m "Update script2.sh in rebase branch"
+warning: in the working copy of 'script2.sh', LF will be replaced by CRLF the next time Git touches it
+[rebase-branch 56e3e65] Update script2.sh in rebase branch
+ 1 file changed, 1 insertion(+)
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo (rebase-branch)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo (master)
+$ git rebase rebase-branch
+Successfully rebased and updated refs/heads/master.
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 350 bytes | 175.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Revathi-Tadela/my-git-repo.git
+   8525d5c..56e3e65  master -> master
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo (master)
+$ echo "# Uncommitted change" >> script1.sh
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo (master)
+$ git stash
+warning: in the working copy of 'script1.sh', LF will be replaced by CRLF the next time Git touches it
+Saved working directory and index state WIP on master: 56e3e65 Update script2.sh in rebase branch
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo (master)
+$ git stash list
+stash@{0}: WIP on master: 56e3e65 Update script2.sh in rebase branch
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo (master)
+$ git stash apply
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   script1.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo (master)
+$ ls -lrt
+total 2
+-rw-r--r-- 1 revat 197609 66 Aug 20 01:12 script2.sh
+-rw-r--r-- 1 revat 197609 58 Aug 20 01:13 script1.sh
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo (master)
+$ view script1.sh
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo (master)
+$ cat script1.sh 
+!/bin/bash/
+echo 'hello world1'
+
+# Uncommitted change
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/my-git-repo (master)
+$
